@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const multer = require("multer");
 
-// const storage = multer.memoryStorage();
-const upload = multer({ dest: './files' });
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 router.post("/fileanalyse", upload.single("upfile") , (req, res) => {
 
