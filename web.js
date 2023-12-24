@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
         <head>
         </head>
         <body>
-            <form action="/fileanalyse" method="post" enctype="multipart/form-data">
+            <form action="/api/fileanalyse" method="post" enctype="multipart/form-data">
                 <label for="file">Select a file:</label>
                 <input type="file" id="file" name="upfile">
             
