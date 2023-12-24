@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const models = require("./models/index");
 const multer = require("multer");
 
 // const storage = multer.memoryStorage();
