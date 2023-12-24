@@ -1,10 +1,6 @@
 const router = require("express").Router();
 
-router.get("/", upload.single("upfile") , (req, res) => {
-
-    const fileName = req.file.originalname;
-    const fileType = req.file.mimetype;
-    const fileSize = req.file.size;
+router.get("/", (req, res) => {
 
     res.send(`
         <head>
@@ -17,7 +13,7 @@ router.get("/", upload.single("upfile") , (req, res) => {
                 <button type="submit">Upload</button>
             </form>
         </body>
-    `)
+    `).end();
 });
 
 module.exports = router;
